@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>*** unnamed text ***</title></head><body>
+<style>
+
+  table.CHESS
+  {
+    border-collapse: collapse;
+  }
+
+  /* любая клетка доски */
+  table.CHESS td
+  {
+    width: 50px;
+    height: 50px;
+    border: solid gray 1px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  /* чёрная клетка доски */
+  table.CHESS td.BLACK
+  {
+    background-color: black;
+  }
+
+  /* клетка вертикального ободка */
+  table.CHESS td.VERT
+  {
+    background-color: lightgreen;
+    width: 20px;
+  }
+
+  /* клетка горизонтального ободка */
+  table.CHESS td.HORZ
+  {
+    background-color: lightgreen;
+    height: 20px;
+  }
+
+</style>
+
+<div id='IChess'></div>
+
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<script>
+  var TableCell=$('<td></td>');
+  var TableRow=$('<tr></tr>');
+  var Table=$('<table></table>');
+
+  // 1. Внутри имеющегося тега div скомпоновать шахматную доску, в точности такую как в jQ_chess.html.
+  // Новых html-элементов не создавать, использовать только уже созданные TableCell, TableRow, Table, клонируя их по мере необходимости.
+
+  // ... ЗДЕСЬ ВАШ КОД ...
+
+  // 2. Одним вызовом jQuery расставить:
+  // клеткам, которые должны быть чёрными - класс BLACK
+  // левой и правой колонке клеток - класс VERT
+  // верхней и нижней строке клеток - класс HORZ
+
+  // ... ЗДЕСЬ ВАШ КОД ...
+
+  // 3. В клетки ободка расставить подписи - по горизонтали слева направо от a до h, по вертикали снизу вверх от 1 до 8.
+  // Расстановка подписей на каждой грани должна производиться одним вызовом функции text либо html,
+  // а не одним вызовом для каждой клеточки отдельно; т.е. должно быть сформировано 4 набора и 4 раза вызвана функция text/html.
+
+  // ... ЗДЕСЬ ВАШ КОД ...
+
+  // 4. Все внесённые подписи и все чёрные клетки сделать прозрачными. Зелёный фон у ободков должен остаться.
+
+  // ... ЗДЕСЬ ВАШ КОД ...
+
+  // 5. Медленно (за 2 сек) проявить чёрные клетки, затем медленно (за 2 сек) проявить подписи.
+
+  // ... ЗДЕСЬ ВАШ КОД ...
+
+
+</script>
+</body></html>

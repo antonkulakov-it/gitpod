@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>float - что же с ним не так?</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<style>
+    .one {
+        border: 1px solid red;
+        padding: 5px;
+    }
+    
+    .two {
+        border: 1px solid green;
+        padding: 5px;
+    }
+    
+    .three {
+        border: 1px solid blue;
+        padding: 5px;
+    }
+    
+    .clearfix:after {
+        content: ".";
+        /* добавить содержимое: "." */
+        display: block;
+        /* сделать блоком, т.к. inline не может иметь clear */
+        clear: both;
+        /* с обеих сторон clear */
+        visibility: hidden;
+        /* сделать невидимым, зачем нам точка внизу? */
+        height: 0;
+        /* сделать высоту 0, чтобы не занимал место */
+    }
+</style>
+
+<body>
+    <div class="clearfix">
+        При применении этого свойства float происходит следующее:
+        <ol>
+            <li>Элемент позиционируется как обычно, а затем вынимается из документа потока и сдвигается влево (для left) или вправо (для right) до того как коснётся либо границы родителя, либо другого элемента с float.</li>
+            <li>Если пространства по горизонтали не хватает для того, чтобы вместить элемент, то он сдвигается вниз до тех пор, пока не начнёт помещаться.</li>
+            <li>Другие непозиционированные блочные элементы без float ведут себя так, как будто элемента с float нет, так как он убран из потока.</li>
+            <li>Строки (inline-элементы), напротив, «знают» о float и обтекают элемент по сторонам.</li>
+        </ol>
+    </div>
+    <div class="clearfix">
+        Применение свойства clear сдвигает элемент вниз до тех пор, пока не закончатся float'ы слева/справа/с обеих сторон.
+    </div>
+
+    <div class="clearfix">
+        <div class="one" style="position:relative;top: 0; left:0;">1<br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="two" style="position:fixed; top: 0; left:0;">2
+                <div class="three" style="">3</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
