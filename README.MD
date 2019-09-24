@@ -1,1 +1,0 @@
-This files is base of cource of Alexey Loktev.
