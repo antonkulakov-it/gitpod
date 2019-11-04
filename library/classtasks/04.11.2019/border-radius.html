@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>закругление границ блоков</title>
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 50px;
+        }
+
+        .border {
+            border: 20px solid red;
+        }
+
+        .outline {
+            outline: 20px solid green;
+        }
+
+        .round {
+            border-radius: 10px;
+        }
+
+        .ring {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="square border round"></div>
+    <div class="square outline round"></div>
+    <div class="square border ring"></div>
+    <div class="square outline ring"></div>
+    <div class="square border ring">в блочных контент выходит за границу бордюра</div>
+    <span class="square border ring">в строчных элементах контент выходит за границу</span>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Свое семейство шрифтов</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "my font face";
+            src: local("Amatic SC Regular"), local("AmaticSC-Regular"), url(https://fonts.gstatic.com/s/amaticsc/v13/TUZyzwprpvBS1izr_vOEDuSfQZQ.woff2) format("woff2");
+        }
+
+        h1 {
+            font-family: "Pacifico", cursive;
+        }
+
+        p {
+            font-family: "my font face";
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>@font-face - задаем свой шрифт и семейство шрифтов</h1>
+    <p>Вот тут - шрифт с моим названием семейства</p>
+
+</body>
+</html>

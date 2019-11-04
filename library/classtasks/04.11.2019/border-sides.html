@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Задание бордюра только одной из граней</title>
+    <style>
+        div {
+            margin: 50px;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .border-left {
+            border-left: 20px solid red;
+        }
+        .border-right {
+            border-right: 20px solid green;
+        }
+        .border-top {
+            border-top: 10px solid yellow;
+        }
+        .border-bottom {
+            border-bottom: 10px solid black;
+        }
+
+        .border-left-transparent {
+            border-left: 20px solid rgba(0,0,0,0);
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+        }
+        .triangle1 {
+            border-bottom: 60px solid red;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+        }
+        .triangle2 {
+            border-top: 60px solid red;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+        }
+        .triangle3 {
+            border-top: 60px solid transparent;
+            border-bottom: 60px solid transparent;
+            border-left: 60px solid red;
+        }
+        .triangle4 {
+            border-top: 60px solid transparent;
+            border-right: 60px solid red;
+            border-bottom: 60px solid transparent;
+        }
+
+        .triangle5 {
+            border-top: 60px solid green;
+            border-right: 60px solid transparent;
+        }
+
+        .triangle6 {
+            border-top: 60px solid green;
+            border-left: 60px solid transparent;
+        }
+        .triangle7 {
+            border-bottom: 60px solid green;
+            border-right: 60px solid transparent;
+        }
+        .triangle8 {
+            border-bottom: 60px solid green;
+            border-left: 60px solid transparent;
+        }
+
+        .triangle-square {
+            border-top: 60px solid red;
+            border-bottom: 60px solid green;
+            border-right: 60px solid blue;
+            border-left: 60px solid yellow;
+            width: 0;
+            height: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="square border-top border-right border-bottom border-left"></div>
+    <div class="square border-top border-right border-bottom border-left-transparent"></div>
+    <div class="square border-top border-right border-bottom"></div>
+
+    <div class="triangle triangle1"></div>
+    <div class="triangle triangle2"></div>
+    <div class="triangle triangle3"></div>
+    <div class="triangle triangle4"></div>
+    <div class="triangle triangle5"></div>
+    <div class="triangle triangle6"></div>
+    <div class="triangle triangle7"></div>
+    <div class="triangle triangle8"></div>
+    <div class="triangle-square"></div>
+</body>
+</html>
