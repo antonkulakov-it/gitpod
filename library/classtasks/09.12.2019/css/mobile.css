@@ -1,0 +1,133 @@
+body, ul {
+	margin: 0;
+}
+
+header {
+	background-color: coral;
+	position: relative;
+	min-height: 120px;
+	min-width: 480px;
+	/*
+	так как мы сделали позиционирование для логотипа, нужно что-то сделать с размерами, чтобы меню не заходило за логотип
+	*/
+	padding-top: 120px;
+}
+
+/*
+задаем положение и размеры логотипу
+*/
+header>div {
+	background-color: lightsalmon;
+	width: calc(100% - 40px);
+	height: 80px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+/*
+убираем маркеры
+*/
+header ul {
+	list-style: none;
+}
+
+/*
+выравниваем списки
+*/
+header>ul {
+	margin-left: -20px;
+}
+
+/*
+задаем внешний вид футеру
+*/
+footer {
+	background-color: aqua;
+	min-height: 120px;
+	line-height: 120px;
+	text-align: center;
+	min-width: 480px;
+}
+
+/*
+задаем цвет и размеры aside
+*/
+aside {
+	background-color: hotpink;
+	padding: 20px 0;
+	min-width: 480px;
+}
+/*
+отображаем как ссылки пункты списка
+*/
+aside ul li, aside label, aside>div {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+/*
+убираем маркеры
+*/
+aside ul {
+	list-style: none;
+}
+/*
+выравниваем первый уровень меню по логотипу
+*/
+aside>ul {
+	margin-left: -20px;
+}
+
+/*
+и надпись каталог тоже
+*/
+aside>div {
+	margin-left: 20px;
+}
+
+/*
+прячем инпуты
+*/
+aside input {
+	display: none;
+}
+/*
+добавляем треугольники, чтобы они были кликабельны
+*/
+aside>ul>li>label::after {
+	content: "\25bc";
+	display: inline;
+	position: absolute;
+	right: 0;
+}
+
+/*
+прячем выпадающие меню
+*/
+#roga~ul, #kopyta~ul, #kozha~ul {
+	display: none;
+}
+/*
+показываем выпадающие меню
+*/
+#roga:checked~ul, #kopyta:checked~ul, #kozha:checked~ul {
+	display: block;
+}
+
+/*
+делаем кликабельной всю строку
+и заставляем не съезжать треугольники на меньших 480px размерах
+*/
+aside>ul>li>label {
+	display: block;
+	position: relative;
+}
+
+/*
+задаем размеры main
+*/
+main {
+	min-height: 400px;
+}
+
