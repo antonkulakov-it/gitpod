@@ -1,0 +1,180 @@
+body, ul {
+	margin: 0;
+}
+/*
+задаем цвета и минимальные размеры хедеру
+*/
+header {
+	background-color: coral;
+	position: relative;
+	min-height: 120px;
+	min-width: 480px;
+}
+/*
+задаем положение и размеры логотипу
+*/
+header>div {
+	background-color: lightsalmon;
+	width: 200px;
+	height: 80px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+/*
+задаем внешний вид горизонтальному меню
+*/
+header>ul>li {
+	display: inline-block;
+}
+/*
+прячем выпадающее меню
+*/
+header>ul>li>ul {
+	display: none;
+}
+/*
+задаем положение выпадающему меню
+*/
+header>ul {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+/*
+задаем внешний вид выпадающему меню по ховеру
+*/
+header>ul>li:hover:nth-child(3)>ul {
+	display: block;
+}
+/*
+задаем позиционирование, чтобы вставить треугольник и выпадающее меню
+*/
+header>ul>li {
+	position: relative;
+}
+/*
+задаем позицию и внешний вид выпадающему меню
+*/
+header>ul>li>ul {
+	position: absolute;
+	right: 0;
+	background-color: gray;
+	list-style: none;
+}
+/*
+вставляем треугольник
+*/
+header>ul>li:nth-child(3)::after {
+	content: "\25bc";
+	display: inline;
+}
+/*
+избавляемся от отступов и задаем ширину
+*/
+header>ul>li>ul>li {
+	margin-left: -40px;
+	min-width: 150px;
+}
+/*
+задаем внешний вид футеру
+*/
+footer {
+	background-color: aqua;
+	min-height: 120px;
+	line-height: 120px;
+	text-align: center;
+	min-width: 480px;
+}
+/*
+делаем бордер слева чтобы была колонка размером не меньше блока
+также можно сделать с помощью linear-gradient, но тогда еще придется сделать для контента отступ, например, с помощью padding
+*/
+main {
+	min-height: 400px;
+	border-left: 250px solid hotpink;
+	min-width: 230px;
+}
+/*
+позиционируем боковое меню, чтобы оно разместилось в левой колонке
+*/
+aside {
+	position: absolute;
+}
+/*
+отображаем как ссылки пункты списка
+*/
+aside ul li, aside label {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+/*
+убираем маркеры, альтернативный способ избавиться от отступа
+*/
+aside ul {
+	list-style: none;
+	padding-inline-start: 0;
+}
+/*
+добавили инпуты и благополучно их прячем
+*/
+aside input {
+	display: none;
+}
+/*
+прячем выпадающие меню
+*/
+#roga~ul, #kopyta~ul, #kozha~ul {
+	display: none;
+}
+/*
+показываем выпадающие меню
+*/
+#roga:checked~ul, #kopyta:checked~ul, #kozha:checked~ul {
+	display: block;
+}
+/*
+добавляем треугольники, чтобы они были кликабельны
+*/
+aside>ul>li>label::after {
+	content: "\25b6";
+	display: inline;
+	position: absolute;
+	right: 0;
+	color: black;
+}
+/*
+Задаем минимальную ширину aside, чтобы наши li занимали всю ширину
+*/
+aside {
+	min-width: 250px;
+}
+/*
+задаем позиционирование чтобы выпадающее меню не сдвигало основное
+*/
+#roga~ul, #kopyta~ul, #kozha~ul {
+	position: absolute;
+	left: 250px;
+	top: 0;
+	min-width: 230px;
+}
+/*
+задаем позиционирование чтобы выпадающее меню рисовалось относительно наших li
+*/
+aside>ul>li {
+	position: relative;
+}
+/*
+заставляем label занимать всю доступную ширину
+*/
+aside>ul>li>label {
+	display: block;
+}
+/*
+задаем внешний вид выпадающим меню
+*/
+aside>ul>li>ul {
+	width: 230;
+	background-color: grey;
+}
