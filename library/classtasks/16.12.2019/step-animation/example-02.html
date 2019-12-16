@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Пошаговая анимация</title>
+    <style>
+        @keyframes stepAnimation
+        {
+            from { background: url("img/sheet.jpg") 0 0; }
+            50% { background: url("img/sheet.jpg") -396px 0; }  /* 462-66=396 */
+            to  { background: url("img/sheet.jpg") 0 0; }
+        }
+        #subzero {
+            width: 66px;
+            height: 135px;
+            animation: stepAnimation 1s steps(6) infinite;
+        }
+</style>
+
+
+    </style>
+</head>
+<body>
+    <div id="subzero"></div>    
+</body>
+</html>
